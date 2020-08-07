@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Rellax from 'rellax';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-landing',
@@ -7,24 +7,41 @@ import * as Rellax from 'rellax';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  data : Date = new Date();
-  focus;
-  focus1;
+  user_details;
+  financial_details;
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
+
+    this.user_details = this.formBuilder.group({
+      company_name: '',
+      sector: '',
+      contact_email: '',
+      contact_person: ''
+    });
+
+  }
+
+ 
 
   ngOnInit() {
-    var rellaxHeader = new Rellax('.rellax-header');
+    
+  }
+  onSubmit(customerData) {
+    // Process checkout data here
+    this.user_details.reset();
 
-    var body = document.getElementsByTagName('body')[0];
-    body.classList.add('landing-page');
-    var navbar = document.getElementsByTagName('nav')[0];
-    navbar.classList.add('navbar-transparent');
+    console.warn('Your order has been submitted', customerData);
   }
-  ngOnDestroy(){
-    var body = document.getElementsByTagName('body')[0];
-    body.classList.remove('landing-page');
-    var navbar = document.getElementsByTagName('nav')[0];
-    navbar.classList.remove('navbar-transparent');
-  }
+
+  // public save(){
+
+
+
+  //   this.http.post<any>('http://127.0.0.1:8000/api/user_details', false).subscribe(data => {
+      
+  //   });
+  // }
+
 }

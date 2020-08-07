@@ -1,2 +1,177 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg6.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">Iberian Ventures</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <h4>Por favor, llena el siguiente formulario para que podamos saber mas de ti o tu empresa.</h4>
+            <form [formGroup]="input_details" (ngSubmit)="onSubmit(input_details.value)">
+            <fieldset formGroupName="user_details">
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Nombre de la empresa:</label>
+                        <input formControlName="company_name" type="text" value="" placeholder="Nombre de la empresa" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Sector en el que opera:</label>
+                        <input formControlName="sector" type="text" value="" placeholder="Sector o industria" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Correo electrónico de contacto:</label>
+                        <input formControlName="contact_email" type="text" value="" placeholder="Correo de contacto" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Persona de contacto:</label>
+                        <input formControlName="contact_person" type="text" value="" placeholder="Persona de contacto" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+            <fieldset formGroupName="financial_details">
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Facturación media de los últimos 3 años (en €):</label>
+                        <input formControlName="revenue" type="text" value="" placeholder="¿Cúal fue la facturacion del último año?" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Años consecutivos creciendo ingreso:</label>
+                        <select formControlName="years_of_growth" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>> 3</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>EBITDA media de los últimos 3 años (en €):</label>
+                        <input formControlName="avg_ebitda_last_3_years" type="text" value="" placeholder="EBITDA del últimno año" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Resultado neto medio de los últimos 3 años (en €):</label>
+                        <input formControlName="avg_net_result_last_3_years" type="text" value="" placeholder="Resultado neto del último año" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Años consecutivos con resultado positivo:</label>
+                        <select formControlName="years_with_positive_result" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>> 3</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Deuda financiera neta total (en €):</label>
+                        <input formControlName="net_debt" type="text" value="" placeholder="Deuda financiera neta total en Euros" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Total activo inmovilizado (en €):</label>
+                        <input formControlName="fixed_assets" type="text" value="" placeholder="Total activo inmovilizado en euros" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Porcentaje de la empresa del mayor accionista?:</label>
+                        <input formControlName="biggest_shareholder" type="text" value="" placeholder="Porcentaje de la empresa que tiene el mayor accionista" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Porcentaje de facturación que viene del mayor cliente:</label>
+                        <input formControlName="revenue_from_biggest_client" type="text" value="" placeholder="Porcentaje facturacion cliente principal" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Ha sido auditada la compañía alguna vez?:</label>
+                        <select formControlName="is_the_company_audited" class="form-control">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Operaciones de compra o fusiones en los últimos 5 años?</label>
+                        <select formControlName="m_and_a_in_the_last_5_years" class="form-control">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Se quiere vender más del 90% de la compañía?</label>
+                        <select formControlName="selling_90_percent" class="form-control">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-warning btn-round">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+

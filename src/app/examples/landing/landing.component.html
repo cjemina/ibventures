@@ -4,168 +4,172 @@
         </div>
         <div class="container">
             <div class="content-center">
-                <h1 class="title">This is our great company.</h1>
-                <div class="text-center">
-                  <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                    <i class="fab fa-facebook-square"></i>
-                  </a>
-                  <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                    <i class="fab fa-google-plus"></i>
-                  </a>
-                </div>
+                <h1 class="title">Iberian Ventures</h1>
             </div>
         </div>
     </div>
     <div class="section section-about-us">
         <div class="container">
+            <h4>Por favor, llena el siguiente formulario para que podamos saber mas de ti o tu empresa.</h4>
+            <form [formGroup]="user_details" (ngSubmit)="onSubmit(user_details.value)">
             <div class="row">
-                <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h2 class="title">Who we are?</h2>
-                    <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.</h5>
-                </div>
-            </div>
-            <div class="separator separator-primary"></div>
-            <div class="section-story-overview">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="image-container image-left" style="background-image: url('assets/img/login.jpg')">
-                            <!-- First image on the left side -->
-                            <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
-                                <br>
-                                <br>
-                                <small>-NOAA</small>
-                            </p>
-                        </div>
-                        <!-- Second image on the left side of the article -->
-                        <div class="image-container" style="background-image: url('assets/img/bg3.jpg')"></div>
-                    </div>
-                    <div class="col-md-5">
-                        <!-- First image on the right side, above the article -->
-                        <div class="image-container image-right" style="background-image: url('assets/img/bg1.jpg')"></div>
-                        <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                        </p>
-                        <p>
-                            For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
-                        </p>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                        </p>
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Nombre de la empresa:</label>
+                        <input formControlName="company_name" type="text" value="" placeholder="Nombre de la empresa" class="form-control" />
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="section section-team text-center">
-        <div class="container">
-            <h2 class="title">Here is our team</h2>
-            <div class="team">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="team-player">
-                            <img src="assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                            <h4 class="title">Romina Hadid</h4>
-                            <p class="category text-primary">Model</p>
-                            <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-instagram"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="team-player">
-                            <img src="assets/img/ryan.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                            <h4 class="title">Ryan Tompson</h4>
-                            <p class="category text-primary">Designer</p>
-                            <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="team-player">
-                            <img src="assets/img/eva.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                            <h4 class="title">Eva Jenner</h4>
-                            <p class="category text-primary">Fashion</p>
-                            <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
-                                <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section section-contact-us text-center">
-        <div class="container">
-            <h2 class="title">Want to work with us?</h2>
-            <p class="description">Your project is very important to us.</p>
             <div class="row">
-                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-                  <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                    <div class="input-group-prepend" >
-                      <span class="input-group-text">
-                          <i class="now-ui-icons users_circle-08"></i>
-                      </span>
-                    </div>
-                      <input type="text" class="form-control" placeholder="Left Font Awesome Icon" (focus)="focus=true" (blur)="focus=false">
-                  </div>
-                  <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
-                    <div class="input-group-prepend" >
-                      <span class="input-group-text">
-                            <i class="now-ui-icons ui-1_email-85"></i>
-                      </span>
-                    </div>
-                      <input type="text" class="form-control" placeholder="Left Font Awesome Icon" (focus)="focus1=true" (blur)="focus1=false">
-                  </div>
-                    <div class="textarea-container">
-                        <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
-                    </div>
-                    <div class="send-button">
-                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Sector en el que opera:</label>
+                        <input formControlName="sector" type="text" value="" placeholder="Sector o industria" class="form-control" />
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Correo electrónico de contacto:</label>
+                        <input formControlName="contact_email" type="text" value="" placeholder="Correo de contacto" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Persona de contacto:</label>
+                        <input formControlName="contact_person" type="text" value="" placeholder="Persona de contacto" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Facturación media de los últimos 3 años (en €):</label>
+                        <input #revenue type="text" value="" placeholder="¿Cúal fue la facturacion del último año?" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Años consecutivos creciendo ingreso:</label>
+                        <select #years_of_growth class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>> 3</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>EBITDA media de los últimos 3 años (en €):</label>
+                        <input #avg_ebitda_last_3_years type="text" value="" placeholder="EBITDA del últimno año" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Resultado neto medio de los últimos 3 años (en €):</label>
+                        <input #avg_net_result_last_3_years type="text" value="" placeholder="Resultado neto del último año" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Años consecutivos con resultado positivo:</label>
+                        <select #years_with_positive_result class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>> 3</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Deuda financiera neta total (en €):</label>
+                        <input #net_debt type="text" value="" placeholder="Deuda financiera neta total en Euros" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Total activo inmovilizado (en €):</label>
+                        <input #fixed_assets type="text" value="" placeholder="Total activo inmovilizado en euros" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Porcentaje de la empresa del mayor accionista?:</label>
+                        <input #biggest_shareholder type="text" value="" placeholder="Porcentaje de la empresa que tiene el mayor accionista" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Porcentaje de facturación que viene del mayor cliente:</label>
+                        <input #revenue_from_biggest_client type="text" value="" placeholder="Porcentaje facturacion cliente principal" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Ha sido auditada la compañía alguna vez?:</label>
+                        <select #is_the_company_audited class="form-control">
+                            <option>No</option>
+                            <option>Si</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Operaciones de compra o fusiones en los últimos 5 años?</label>
+                        <select #m_and_a_in_the_last_5_years class="form-control">
+                            <option>No</option>
+                            <option>Si</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>¿Se quiere vender más del 90% de la compañía?</label>
+                        <select #selling_90_percent class="form-control">
+                            <option>No</option>
+                            <option>Si</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-warning btn-round">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
-    <footer class="footer footer-default">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com">
-                            Creative Tim
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/about-us">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://blog.creative-tim.com">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
-                            MIT License
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="copyright">
-                &copy;
-                {{data | date: 'yyyy'}}, Designed by
-                <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-            </div>
-        </div>
-    </footer>
+    
+    
 </div>
+
